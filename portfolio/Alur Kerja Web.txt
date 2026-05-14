@@ -1,0 +1,27 @@
+portfolio/
+├── config/config.php          ← DB credentials + app constants
+├── core/
+│   ├── Database.php           ← PDO singleton
+│   ├── Controller.php         ← Base controller (view/json/redirect)
+│   └── Router.php             ← Front-controller URL router
+├── app/
+│   ├── controllers/
+│   │   ├── HomeController.php
+│   │   ├── ProjectController.php
+│   │   └── ContactController.php  ← Validates + saves messages
+│   ├── models/
+│   │   ├── Project.php            ← Prepared statements
+│   │   └── Message.php            ← Sanitized inserts
+│   └── views/
+│       ├── layouts/header.php     ← Tailwind CDN, navbar
+│       ├── layouts/footer.php     ← Footer + scripts
+│       ├── home.php               ← Hero, About, Skills, Projects, CTA
+│       ├── projects.php           ← Full project grid
+│       └── contact.php            ← AJAX contact form
+├── public/
+│   ├── index.php              ← Front controller (routes defined here)
+│   ├── .htaccess              ← Clean URLs + security headers
+│   └── assets/
+│       ├── css/main.css       ← Glassmorphism, animations, noise texture
+│       └── js/main.js         ← Scroll reveal, tilt, cursor glow, mobile menu
+└── database/portfolio.sql     ← Schema + 3 seed projects
