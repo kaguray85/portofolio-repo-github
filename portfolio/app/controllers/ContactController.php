@@ -21,9 +21,9 @@ class ContactController extends Controller
         }
 
         // ── Retrieve & Sanitize ───────────────────
-        $name    = trim(filter_input(INPUT_POST, 'name',    FILTER_SANITIZE_SPECIAL_CHARS) ?? '');
-        $email   = trim(filter_input(INPUT_POST, 'email',   FILTER_SANITIZE_EMAIL)          ?? '');
-        $message = trim(filter_input(INPUT_POST, 'message', FILTER_SANITIZE_SPECIAL_CHARS) ?? '');
+        $name    = trim((string) filter_input(INPUT_POST, 'name', FILTER_UNSAFE_RAW));
+        $email   = trim((string) filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL));
+        $message = trim((string) filter_input(INPUT_POST, 'message', FILTER_UNSAFE_RAW));
 
         // ── Validate ──────────────────────────────
         $errors = [];

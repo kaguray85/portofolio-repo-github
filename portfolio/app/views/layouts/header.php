@@ -54,7 +54,10 @@
 
       <!-- Logo -->
       <a href="<?= APP_URL ?>/" class="group flex items-center gap-2">
-        <span class="w-8 h-8 rounded-lg bg-gradient-to-br from-accent to-purple flex items-center justify-center text-xs font-mono font-bold text-white">MK</span>
+        <span class="brand-mark" aria-hidden="true">
+          <span class="brand-mark-k">K</span>
+          <span class="brand-mark-h">H</span>
+        </span>
         <span class="font-display font-700 text-lg tracking-tight text-white group-hover:text-accent transition-colors">Khaliz<span class="text-accent">.</span></span>
       </a>
 
@@ -71,17 +74,15 @@
       <div class="hidden md:flex items-center gap-3">
         <div class="nav-controls" aria-label="Theme and language controls">
           <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" aria-pressed="false">
-            <span class="theme-icon theme-icon-sun" aria-hidden="true">☀️</span>
-            <span class="theme-icon theme-icon-moon" aria-hidden="true">🌙</span>
+            <span class="theme-icon theme-icon-sun" aria-hidden="true"></span>
+            <span class="theme-icon theme-icon-moon" aria-hidden="true"></span>
           </button>
           <div class="locale-switcher" role="group" aria-label="Language switcher">
-            <button type="button" class="locale-option is-active" data-locale="id" aria-pressed="true">
-              <span class="locale-flag" aria-hidden="true">🇮🇩</span>
-              <span>ID</span>
+            <button type="button" class="locale-option is-active" data-locale="id" aria-label="Bahasa Indonesia" aria-pressed="true">
+              <span class="locale-flag locale-flag-id" aria-hidden="true"></span>
             </button>
-            <button type="button" class="locale-option" data-locale="en" aria-pressed="false">
-              <span class="locale-flag" aria-hidden="true">🇺🇸</span>
-              <span>EN</span>
+            <button type="button" class="locale-option" data-locale="en" aria-label="English" aria-pressed="false">
+              <span class="locale-flag locale-flag-us" aria-hidden="true"></span>
             </button>
           </div>
         </div>
@@ -108,17 +109,15 @@
       <div class="flex flex-wrap items-center gap-3 pt-2">
         <div class="nav-controls" aria-label="Theme and language controls">
           <button type="button" id="theme-toggle-mobile" class="theme-toggle" aria-label="Toggle theme" aria-pressed="false">
-            <span class="theme-icon theme-icon-sun" aria-hidden="true">☀️</span>
-            <span class="theme-icon theme-icon-moon" aria-hidden="true">🌙</span>
+            <span class="theme-icon theme-icon-sun" aria-hidden="true"></span>
+            <span class="theme-icon theme-icon-moon" aria-hidden="true"></span>
           </button>
           <div class="locale-switcher" role="group" aria-label="Language switcher">
-            <button type="button" class="locale-option is-active" data-locale="id" aria-pressed="true">
-              <span class="locale-flag" aria-hidden="true">🇮🇩</span>
-              <span>ID</span>
+            <button type="button" class="locale-option is-active" data-locale="id" aria-label="Bahasa Indonesia" aria-pressed="true">
+              <span class="locale-flag locale-flag-id" aria-hidden="true"></span>
             </button>
-            <button type="button" class="locale-option" data-locale="en" aria-pressed="false">
-              <span class="locale-flag" aria-hidden="true">🇺🇸</span>
-              <span>EN</span>
+            <button type="button" class="locale-option" data-locale="en" aria-label="English" aria-pressed="false">
+              <span class="locale-flag locale-flag-us" aria-hidden="true"></span>
             </button>
           </div>
         </div>

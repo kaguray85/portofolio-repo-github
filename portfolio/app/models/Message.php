@@ -10,14 +10,6 @@ class Message
         $this->db = Database::getInstance();
     }
 
-    /**
-     * Store a sanitized message.
-     *
-     * @param string $name
-     * @param string $email
-     * @param string $message
-     * @return bool
-     */
     public function store(string $name, string $email, string $message): bool
     {
         $stmt = $this->db->prepare(
@@ -25,11 +17,7 @@ class Message
              VALUES (?, ?, ?, NOW())'
         );
 
-        return $stmt->execute([
-            htmlspecialchars($name,    ENT_QUOTES, 'UTF-8'),
-            htmlspecialchars($email,   ENT_QUOTES, 'UTF-8'),
-            htmlspecialchars($message, ENT_QUOTES, 'UTF-8'),
-        ]);
+        return $stmt->execute([$name, $email, $message]);
     }
 
     public function all(): array

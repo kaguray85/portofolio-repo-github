@@ -15,17 +15,29 @@
     <!-- Left: Text -->
     <div class="reveal-up">
 
-      <!-- Badge -->
-      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/10 border border-accent/20 text-accent text-xs font-mono font-medium mb-8">
-        <span class="w-1.5 h-1.5 rounded-full bg-accent animate-ping-slow"></span>
-        <span data-locale-key="availability">Available for freelance work</span>
-      </div>
+      <div class="hero-heading-wrap mb-6">
+        <!-- Badge -->
+        <div class="hero-availability inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/10 border border-accent/20 text-accent text-xs font-mono font-medium">
+          <span class="w-1.5 h-1.5 rounded-full bg-accent animate-ping-slow"></span>
+          <span data-locale-key="availability">Available for freelance work</span>
+        </div>
 
-      <h1 class="font-display text-5xl lg:text-7xl font-extrabold leading-none tracking-tighter mb-6">
-        <span data-locale-key="heroGreeting">Hi, I'm</span><br/>
-        <span class="gradient-text">Khaliz</span><br/>
-        <span class="text-gray-400 text-4xl lg:text-5xl font-semibold">Hakam</span>
-      </h1>
+        <div class="hero-profile-photo" aria-hidden="true">
+          <span class="hero-profile-placeholder">KH</span>
+          <img
+            src="<?= APP_URL ?>/assets/images/profile-khaliz.jpg"
+            alt=""
+            onload="this.closest('.hero-profile-photo').classList.add('has-image')"
+            onerror="this.remove()"
+          >
+        </div>
+
+        <h1 class="hero-name font-display">
+          <span data-locale-key="heroGreeting">Hi, I'm</span>
+          <span class="gradient-text">Khaliz</span>
+          <span class="text-gray-400">Hakam</span>
+        </h1>
+      </div>
 
       <div class="flex items-center gap-3 mb-6">
         <span class="text-lg text-gray-300 font-mono" data-locale-key="roleTitle">Web Developer</span>
@@ -50,7 +62,7 @@
 
       <!-- Stats Row -->
       <div class="mt-14 flex gap-10">
-        <?php foreach ([['3+', 'Years Study'], ['3+', 'Projects Done'], ['8+', 'Technologies']] as [$num, $label]): ?>
+        <?php foreach ([['3+', 'Years Study'], ['3+', 'Projects Done'], ['10+', 'Technologies']] as [$num, $label]): ?>
         <div>
           <div class="text-3xl font-display font-extrabold gradient-text"><?= $num ?></div>
           <div class="text-xs text-gray-500 mt-1" data-locale-key="stat<?= preg_replace('/\s+/', '', $label) ?>"><?= $label ?></div>
